@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title> 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            padding: 9px;
+            border: 2px solid red;
+            margin: 3px 0;
+            background-color: cyan;
+        }
+        .bg-primary{
+            background-color: blueviolet;
+        }
+        .text-success{
+            color:purple; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my webpage. I'm learning javascript! </h1>
+    <div id="firstContainer" class="container">
+            <button id="click" onclick="clicked()">Click Me</button>
+            <p>This is a paragraph which is the best paragraph in the world.</p>
+</div>   
+<div class="container">
+    <p>This is a paragraph</p>
+</div>
+
+</body>
+<script>
+
+    // console.log("") --> console me aaega, page par nahi.
+    //alert("") --> page par aaega...
+
+
+    console.log("Hello, and welcome.");
+  //  alert("oh! why so early today?");
+
+let elem = document.getElementById('click');
+console.log(elem);
+
+let elemClass = document.getElementsByClassName("container")
+console.log(elemClass);
+   elemClass[0].style.background = "yellow" ;
+//  elemClass[0].classList.add("bg-primary");
+elemClass[0].classList.add("text-success")
+  // or remove similarly instead of add ..
+
+//concentrate on any one element. give it same name maybe? and edit it.
+//js. 
+
+
+tn=document.getElementsByTagName('div')
+console.log(tn)
+
+//create -> add something : from js.  
+createdElement = document.createElement('p');
+createdElement.innerText="This is a para and this is cool lol.";
+tn[0].appendChild(createdElement);
+//let elem = document.getElementById('click');
+//console.log(elem);
+
+//replace child or a statement/block lol : showing this in bold
+  createdElement2 = document.createElement('b');
+  createdElement2.innerText="is this in bold? ";
+  tn[0].replaceChild(createdElement2, createdElement);
+
+  //removechild(element); --> removes an element.
+  //reference : mdn ?
+  
+  //document. reference/title/url/scripts/links/forms/images/domain
+
+//selecting using query. and finding? 
+sel = document.querySelector('.container')
+console.log(sel);
+
+//events in javascript : anything thats happening. clickme and all ..
+// refer line: 30...and make it a function ...
+
+function clicked(){
+    console.log('The button was clicked')
+}
+window.onload=function(){
+    console.log('The document was loaded')
+}
+
+// event listener ?
+firstContainer.addEventListener('click', function(){
+    console.log("Click on container")
+})
+
+//firstContainer.addEventListener('click', function(){
+//document.querySelectorAll('.container')[1].innerHTML = "<b>We have clicked</b>"
+//})
+
+firstContainer.addEventListener('mouseover', function(){
+    console.log("Click on container")
+})
+
+firstContainer.addEventListener('mouseout', function(){
+    console.log("mouse out of container")
+})
+
+let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
+firstContainer.addEventListener('mouseup', function(){
+    document.querySelectorAll('.container')[1].innerHTML = prevHTML;
+    console.log("Mouse up when clidked on container");
+})
+
+firstContainer.addEventListener('mousedown', function(){
+    document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked</b>"
+    console.log("Mouse down when clicked on container");
+})
+
+
+//ARROW FUNCTIONS
+logg=()=>{
+    console.log("I am your log wow!")
+  //  alert("Buy this?")
+//popup on screen. is it that? 
+}
+// SETTING TIMEOUT AND INTERVALS .. 
+setTimeout(logg,2000);
+
+//* thode time ke baad oi kaam karana hai to use this : 
+// logg=()=>{
+//document.querySelectorAll('.container')[1].innerHTML ="<b> Set interval fired</b>"
+//}
+
+// use :   SetInterval(logg,2000)  for making one task repeat 
+
+//whats a local storage: 
+
+localStorage.setItem('name','harry')
+localStorage
+localStorage.getItem('name')
+
+//JSON 
+//json supports require double quote "...."
+
+  obj = {name:"harry", length:1, a:{this:"that"}}
+jso = JSON.stringify(obj);
+console.log(typeof jso)
+console.log(jso)
+
+parsed = JSON.parse(`{"name":"harry","length":1,"a":{"this":"that"}}`)
+console.log(parsed);   
+
+    //**  ECMA SCRIPT ** //
+
+//  using document.getElementBy either id or class for html and can edit html elements.
+
+// using queryselecter for editing css elements. and queryselecterall for editing all the css (.) which are assosiated with that perticular id ...
+
+//DOM
+
+//BROWSER EVENTS:
+/* 
+click
+CONTEXTMENU
+MOUSEOVER
+MOUSEOUT
+mousedown
+mouseup */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

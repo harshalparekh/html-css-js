@@ -1,0 +1,467 @@
+/*Start: 18. Jan. 2022 by Parth V. and Harshal Parekh*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: ease-in 0.1s;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ff4162;
+}
+
+.container{
+    overflow: hidden;
+    display: flex;
+    height: 600px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+#login{
+    position: relative;
+    width: 43%;
+    height: 100%;
+}
+
+.loginAnimation{
+    animation: moveRight 1s ;
+}
+
+@keyframes moveRight{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: 415px;
+    }
+}
+
+.loginRight{
+    position: relative;
+    left: 415px;
+}
+
+.loginAnimLeft{
+    animation: moveLeftLogin 1s ;
+}
+
+@keyframes moveLeftLogin{
+    0%{
+        position: relative;
+        width: 0%;
+        left: 415px;
+    }
+    100%{
+        position: relative;
+        width: 43%;
+        left: 0px;
+    }
+}
+
+.loginLeft{
+    position: relative;
+    left: 0px;
+}
+
+.logo{
+    padding-top: 30px;
+    position: relative;
+    left: 160px;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    height:90px;
+    width: 30%;
+    background:white;
+    background-image: url(sprites/usethis:.png)
+}
+
+.loginContainer{
+    position: relative;
+    top: 70px;
+    left: 90px;
+    height: auto;
+    width: 80%;
+}
+
+.loginText{
+    position: relative;
+    height: auto;
+    width: auto;
+    font-family: sans-serif;
+    font-size: 22px;
+    color: #000;
+}
+
+.emailHolder{
+    font-family: sans-serif;
+    font-size: 10px;
+    position: relative;
+    top: 30px;
+}
+
+.emailLine{
+    position: relative;
+    top: 5px;
+    width: 73%;
+    border: 1px solid #000;
+    background: #000;
+}
+
+.emailBox{
+    border: 0px;
+    outline: none;
+    width: 60%;
+}
+
+.emailATTHERATE{
+    position: relative;
+    width: 7%;
+    left: 255px;
+    bottom:15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.passwordHolder{
+    font-family: sans-serif;
+    font-size: 10px;
+    position: relative;
+    top: 80px;
+}
+
+#passwordlogo{
+    position: relative;
+    height: 18px;
+    width: 6%;
+    left: 245px;
+    bottom:15px;
+    font-size: 15px;
+    cursor: pointer;
+    background-size: 100% 100%;
+}
+
+.passLogoVisible{
+    background-image: url(sprites/view.png);
+}
+
+.passLogoHidden{
+    background-image: url(sprites/hidden.png);
+}
+
+.passwordLine{
+    position: relative;
+    top: -10px;
+    width: 73%;
+    border: 1px solid #000;
+    background: #000;
+}
+
+.passBox{
+    border: 0px;
+    outline: none;
+    width: 60%;
+}
+
+.forgotPasword{
+    height: auto;
+    width: auto;
+    position: relative;
+    top: 80px;
+    left: 185px;
+    font-size: 12px;
+    color: #ff4162;
+    cursor:pointer;
+}
+
+.loginButton{
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+    position: relative;
+    top: 190px;
+    left: 90px;
+    height: 40px;
+    width: 270px;
+    background: #ff0e38;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.loginButton:hover{
+    background: #ff4400;
+    color: white;
+}
+
+.facebookButton{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 200px;
+    left: 90px;
+    height: 40px;
+    width: 270px;
+    background: #fff;
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    background-color:blue;
+    border: none;
+    color:white;
+    padding: 12px 32px;
+    text-align: center;
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+.fbpng{
+    position: absolute;
+    right: 200px;
+    bottom: 7px;
+    width: 20%;
+    cursor: pointer;
+}
+
+.facebookButton:hover{
+    background-color: darkblue;
+    color: white;
+}
+
+#signup{
+    position: absolute;
+    height: 600px; 
+    width: 33%;
+}
+
+.signupINVisible{
+    display: none;
+}
+
+.signupVisible{
+    display: inline;
+}
+
+.signupAnimation{
+    animation: moveRightSignup 1s ;
+}
+
+@keyframes moveRightSignup{
+    0%{
+        left: 500px;
+        width: 10px;
+    }
+    100%{
+        left: 840px;
+        width: 33%;
+    }
+}
+
+.signupRight{
+    left: 840px;
+    width: 33%;
+}
+
+.signupAnimLeft{
+    animation: moveLeftSignup 1s ;
+}
+
+@keyframes moveLeftSignup{
+     0%{
+        left: 840px;
+        width: 33%;
+    }
+    100%{
+        left: 500px;
+        width: 10px;
+    }
+}
+
+.signupLeft{
+    left: 500px;
+    width: 10px;
+}
+
+.signLogo{
+    padding-top: 30px;
+    position: relative;
+    left: 220px;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    height:90px;
+    width: 29%;
+    background:white;
+    background-image: url(sprites/usethis:.png)
+}
+
+.signupContainer{
+    position: relative;
+    padding-left: 20px;
+    left: 23px;
+    top: 70px;
+}
+
+.signupText{
+    position: relative;
+    font-family: sans-serif;
+    left: 100px;
+    top: 20px;
+    font-size: 22px;
+}
+
+.signEmailHolder{
+    position: relative;
+    font-size: 10px;
+    left: 100px;
+    top: 50px;
+}
+
+.signEmailTextHolder{
+    padding-left: 20px;
+    background: #f0f0f0;
+    width: 60%;
+    height: 40px;
+    border: 0px;
+    outline: none;
+}
+
+.signPassHolder{
+    position: relative;
+    font-size: 10px;
+    left: 100px;
+    top: 55px;
+}
+
+.signPnoHolder{
+    position: relative;
+    font-size: 10px;
+    left: 100px;
+    top: 60px;
+}
+
+.signupButton{
+    font-family: sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    position: relative;
+    height: 40px;
+    left: 190px;
+    top: 170px;
+    width: 37%;
+    border-radius: 50px;
+    background: #ff4162;
+    color: #fff;
+}
+
+#back2loginButton{
+    font-family: sans-serif;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    position: relative;
+    height: 40px;
+    left: 190px;
+    top: 180px;
+    width: 37%;
+    border-radius: 50px;
+    background: blue;
+    color: #fff;
+    cursor: pointer;
+}
+
+#image{
+    box-shadow: 10px 0px 10px grey inset;
+    border-radius: 8px;
+    width: 992px;
+    height: 600px;
+    background: white ;
+    background-image: url(sprites/kevin-bhagat-zNRITe8NPqY-unsplash.jpg);
+}
+
+.imageAnimation{
+    animation: moveLeft 1s ;
+}
+
+@keyframes moveLeft{
+    0%{
+        position: relative;
+        left: 0px;
+    }
+    100%{
+        position: relative;
+        left: -470px;
+    }
+}
+
+.imageLeft{
+    position: relative;
+    left: -470px;
+}
+
+.imageAnimRight{
+    animation: moveRightImage 1s ;
+}
+
+@keyframes moveRightImage{
+    0%{
+        width: 870px;
+    }
+    100%{
+        position: relative;
+        left: 0px;
+    }
+}
+
+.imageRight{
+    position: relative;
+    left: 0px;
+}
+
+.createAccountHolder{
+    position: relative;
+    top: 240px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    height: 15px;
+    width: auto;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.createAccountText{
+    cursor: default;
+    
+}
+
+#createAccountLink{
+    color: #ff4162;
+    cursor: pointer;
+}
+
+.copyright{
+    position: relative;
+    top: 272px;
+    left: 180px;
+    font-size: 12px;
+}
+
+.credits{
+    position: relative;
+    top: 275px;
+    left: 130px;
+    font-size: 12px;
+}
